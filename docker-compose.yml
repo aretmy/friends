@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  clickhouse:
+    image: yandex/clickhouse-server
+    restart: always
+    volumes:
+      - clickhouse:/var/lib/clickhouse
+      - loaddata.sh:/tmp/loaddata.sh
+    ports:
+      - 8124:8123
+      - 9001:9000
+
+volumes:
+  clickhouse:

@@ -1,0 +1,1 @@
+clickhouse-client --format_csv_delimiter="|" --query="insert into words FORMAT CSV" < /tmp/data.csv
